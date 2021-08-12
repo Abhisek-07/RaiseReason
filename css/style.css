@@ -1,0 +1,397 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+header{
+    background-image:linear-gradient(rgba(0,0,0,0.6),rgba(0,0,0,0.6)), url(marcos-paulo-prado-83JZupwXfhU-unsplash.jpg);
+    min-height: 100vh;
+    background-size: cover;
+    background-position: center;
+}
+.navbar{
+    display: flex;
+    align-items: center;
+}
+nav{
+    flex: 1;
+    text-align: right;
+    margin-right: 20px;
+}
+nav ul{
+    display: inline-block;
+    list-style-type: none;
+    font-size: 0;
+    }
+nav ul li{
+    display: inline-block;
+}
+nav a{
+    text-decoration: none;
+    color: azure;
+    font-size: 20px;
+    display: block;
+    padding: 10px 20px;
+    border: 1px solid transparent;
+    transition: all 0.2s ease;
+}
+nav a:hover{
+    background-color: rgb(255, 255, 255);
+    color: black;
+}
+nav ul li.active a{
+    background-color: #fff;
+    color: #000;
+}
+.logo img{
+    width: 200px;
+    height: auto;
+}
+.container{
+    max-width: 1300px;
+    margin: auto;
+    padding-left: 25px;
+    padding-right: 25px;
+}
+.title{
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin-top: 70px;
+    padding: 30px 10px 100px 10px;
+    animation: transitionIn 0.75s;
+}
+.title h1{
+    font-size: 70px;
+    color: #fff;
+    line-height: 80px;
+    margin-bottom: 10px;
+}
+.title p{
+    color: #fff;
+    font-size: 24px;
+    font-weight: 500;
+    margin: 0 0 20px 0;
+} 
+.title a{
+    margin-top: 120px;
+    text-decoration: none;
+    color: #fff;
+    font-size: 20px;
+    font-weight: 500;
+    border: 1px solid #fff;
+    padding: 20px 40px;
+    transition: all 0.5s ease;
+}
+.title a:hover{
+    background-color: #fff;
+    color: #000;
+    transform: translateY(-5px); 
+}
+
+@keyframes transitionIn{
+    from{
+        opacity: 0;
+        transform: translateY(-40px);
+    }
+
+    to{
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+
+
+/*-------------about-section-----------*/
+
+
+.about{
+    padding: 70px 0;
+    background: #000;
+    color: #fff;
+}
+.img-container{
+    max-width: 750px;
+    max-height: 500px;
+    margin: auto;
+    border: 1px solid #fff;
+    padding: 2px;
+}
+.img-container img{
+    max-width: 100%;
+    height: auto;
+}
+.about h1{
+    text-align: center;
+    padding-bottom: 40px;
+    color: #ff523b;
+}
+.about p{
+    margin-top: 40px;
+    line-height: 32px;
+    color: #ff523b;
+}
+#slider{
+    overflow: hidden;
+}
+#slider figure{
+    position: relative;
+    width: 500%;
+    margin: 0;
+    left: 0;
+    animation: 15s slider infinite;
+}
+#slider figure img{
+    width: 20%;
+    float: left;
+}
+
+@keyframes slider{
+    0% {
+        left: 0;
+    }
+    20% {
+        left: 0;
+    }
+    25% {
+        left: -100%;
+    }
+    45% {
+        left: -100%;
+    }
+    50% {
+        left: -200%;
+    }
+    70% {
+        left: -200%;
+    }
+    75% {
+        left: -300%;
+    }
+    95% {
+        left: -300%;
+    }
+    100% {
+        left: -400%;
+    }
+}
+
+/*---------footer--------*/
+
+footer{
+    width: 100%;
+    background: #111;
+    color: #d9d9d9;
+}
+.fab{
+    color: #d9d9d9;
+}
+.main-content{
+    display: flex;
+    padding: 0 40px;
+}
+.main-content .box{
+    flex-basis: 50%;
+    padding: 10px 20px;
+}
+.box h2{
+    font-size: 1.125rem;
+    font-weight: 600;
+    text-transform: uppercase;
+}
+.box .content{
+    margin: 20px 0 0 0;
+    position: relative;
+}
+.box .content:before{
+    position: absolute;
+    content: '';
+    top: -10px;
+    height: 2px;
+    width: 100%;
+    background: #1a1a1a;
+}
+.box .content:after{
+    position: absolute;
+    content: '';
+    height: 2px;
+    width: 15%;
+    background: #f12020;
+    top: -10px;
+}
+.left .content p{
+    text-align: justify;
+}
+.left .content .social{
+    margin: 20px 0 0 0;
+}
+.left .content .social a{
+    padding: 0 2px;
+}
+.left .content .social a span{
+    height: 40px;
+    width: 40px;
+    background: #1a1a1a;
+    line-height: 40px;
+    text-align: center;
+    font-size: 18px;
+    border-radius: 5px;
+    transition: 0.3s;
+}
+.left .content .social a span:hover{
+    background: #f12020;
+}
+.center .content .fas{
+    font-size: 1.4375rem;
+    background: #1a1a1a;
+    height: 45px;
+    width: 45px;
+    line-height: 45px;
+    text-align: center;
+    border-radius: 50%;
+    transition: 0.3s;
+    cursor: pointer;
+}
+.center .content .fas:hover{
+    background: #f12020;
+}
+.center .content .text{
+    font-size: 1.0625rem;
+    font-weight: 500;
+    padding-left: 10px;
+}
+.center .content .phone{
+    margin: 10px 0;
+}
+.right form .text{
+    margin-bottom: 2px;
+    font-size: 1.0625rem;
+    color: #656565;
+}
+.right form .msg{
+    margin-top: 10px;
+}
+.right form input, .right form textarea{
+    width: 100%;
+    font-size: 1.0625rem;
+    background: #151515;
+    padding-left: 10px;
+    border: 1px solid #222222;
+}
+.right form input:focus, 
+.right form textarea:focus{
+    outline-color: #3498db;
+}
+.right form input{
+    height: 35px;
+}
+.right form .btn{
+    margin-top: 10px;
+}
+.right form .btn button{
+    color: #d9d9d9;
+    height: 40px;
+    width: 100%;
+    border: none;
+    outline: none;
+    background: #f12020;
+    font-size: 1.0625rem;
+    font-weight: 500;
+    cursor: pointer;
+    transition: .3s;
+}
+.right form .btn button:hover{
+    background: #000;
+}
+.bottom{
+    text-align: center;
+    padding: 5px;
+    font-size: 0.9375rem;
+    background: #151515;
+}
+.bottom span{
+    color: #656565;
+}
+.bottom a{
+    color: #f12020;
+    text-decoration: none;
+}
+.bottom a:hover{
+    text-decoration: underline;
+}
+
+@media screen and (max-width: 900px) {
+    footer{
+        position: relative;
+        bottom: 0px;
+    }
+    .main-content{
+        flex-wrap: wrap;
+        flex-direction: column;
+    }
+    .main-content .box{
+        margin: 5px 0;
+    }
+}
+
+
+/*---------Donate page--------*/
+
+
+.donate{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    max-width: 1300px;
+    margin: auto;
+    padding-left: 25px;
+    padding-right: 25px;
+    animation: transitionIn 0.75s;
+}
+.donatebox
+ {
+    background-color: rgb(0,0,0,0.6);
+    border-radius: 20px;
+    padding: 2.5% 5%;
+    text-align: center;
+    color: #fff;
+    margin: 7.5%;
+  }
+  .donatebox h2
+  {
+    text-align: center;
+    font-size: 200%;
+    margin: 10px 0;
+  }
+  .donatebox .fa-user
+  {
+    margin-bottom: 3px;
+  }
+
+
+/*media queries*/
+
+@media screen and (max-width: 800px){
+    .navbar{
+        flex-direction: column;
+    }
+}
+
+@media screen and (max-width: 540px){
+    .navbar{
+        flex-direction: column;
+    }
+    nav ul li{
+        display: block;
+    }
+    nav{
+        width: 100%;
+        text-align: center;
+    }
+}
